@@ -1,0 +1,16 @@
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\GraWaz.exe
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\GraWaz.deps.json
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\GraWaz.runtimeconfig.json
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\GraWaz.runtimeconfig.dev.json
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\GraWaz.dll
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\ref\GraWaz.dll
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\bin\Debug\net5.0\GraWaz.pdb
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.csproj.AssemblyReference.cache
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.AssemblyInfoInputs.cache
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.AssemblyInfo.cs
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.csproj.CoreCompileInputs.cache
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.dll
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\ref\GraWaz.dll
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.pdb
+C:\Users\Praktyki\source\repos\GraWaz\GraWaz\obj\Debug\net5.0\GraWaz.genruntimeconfig.cache
