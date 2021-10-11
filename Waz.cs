@@ -17,10 +17,12 @@ namespace GraWaz
         }
         
         Kierunek kierunek = Kierunek.prawo;
-        int wydluzenie = 0; // o ile ma byc wydluzony ( przy wydluzeniu to wyczyscimy )
+        int  wydluzenie = 0;                     // o ile ma byc wydluzony ( przy wydluzeniu to wyczyscimy )
+        bool wydluzany;
+
         List<Punkt> czlonkiWeza = new();
 
-        Punkt gumka = new();
+        Punkt gumka; 
 
         Nagroda nagroda;
 
@@ -73,11 +75,14 @@ namespace GraWaz
             if (!dodajElement()) return false; 
             if (wydluzenie > 0)
             {
+                wydluzany = true;
                 wydluzenie--;
             }
             else
             {
                 gumka = czlonkiWeza[0];
+                wydluzany = false;
+                Console.SetCursorPosition(0,0);
                 czlonkiWeza.RemoveAt(0);
             }
             return true;         
@@ -96,11 +101,13 @@ namespace GraWaz
                 Console.SetCursorPosition(czlonek.x, czlonek.y);
                 Console.Write(" ");
             }
-            
+             
             Console.ResetColor();
-
-            Console.SetCursorPosition(gumka.x, gumka.y);
-            Console.Write(" ");
+            if(!wydluzany)
+            { 
+                Console.SetCursorPosition(gumka.x, gumka.y);
+                Console.Write(" ");
+            }
            
         }
 
