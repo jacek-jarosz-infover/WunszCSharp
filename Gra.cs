@@ -54,8 +54,6 @@ namespace GraWaz
             waz = new(2,2);
             Plansza.NarysujRamke();
        
-            Console.WriteLine(nowykierunek);
-
             RozpocznijZbieraniePrzyciskow();
             Console.CursorVisible = false;
             bool kontynuujGre = true; 
