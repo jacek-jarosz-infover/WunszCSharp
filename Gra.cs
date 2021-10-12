@@ -37,6 +37,11 @@ namespace GraWaz
                         case ConsoleKey.S:
                             nowykierunek = Waz.Kierunek.dol;
                             break;
+                        case ConsoleKey.Escape:
+                            Console.Clear();
+                            Console.CursorVisible=true;
+                            Environment.Exit(0);
+                            break;
                     }
                 }
 
