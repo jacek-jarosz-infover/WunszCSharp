@@ -95,20 +95,19 @@ namespace GraWaz
 
         public void Narysuj()
         {
+            if(!wydluzany)
+            { 
+                Console.SetCursorPosition(gumka.x, gumka.y);
+                Console.Write(" ");
+            }
+
             Console.BackgroundColor = ConsoleColor.Cyan;
             foreach(Punkt czlonek in czlonkiWeza)
             {
                 Console.SetCursorPosition(czlonek.x, czlonek.y);
                 Console.Write(" ");
             }
-             
             Console.ResetColor();
-            if(!wydluzany)
-            { 
-                Console.SetCursorPosition(gumka.x, gumka.y);
-                Console.Write(" ");
-            }
-           
         }
 
         public void UstawKierunek(Kierunek k)
