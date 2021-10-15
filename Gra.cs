@@ -28,7 +28,8 @@ namespace GraWaz
         {
             Console.Clear();
             NapiszNaSrodku("Game over", ConsoleColor.Red);
-            Console.ReadKey();
+            Console.ReadKey(true);
+            Console.CursorVisible = true;
             Environment.Exit(0);
         }
 
