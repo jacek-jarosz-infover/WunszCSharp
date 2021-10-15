@@ -30,7 +30,8 @@ namespace GraWaz
         public Waz(int startx, int starty)
         {
             czlonkiWeza.Add(new(startx, starty));
-            wydluzenie = 5;
+            //wydluzenie = 5;
+            wydluzenie = 9999;
         }
         public Waz() : this(1, 1)
         { }
@@ -42,24 +43,30 @@ namespace GraWaz
             switch (kierunek)
             {
                 case Kierunek.gora:
-                    nowypunkt.x = glowa.x;
-                    nowypunkt.y = glowa.y - 1;
+                    nowypunkt.X = glowa.X;
+                    nowypunkt.Y = glowa.Y - 1;
                     break;
                 case Kierunek.dol:
-                    nowypunkt.x = glowa.x;
-                    nowypunkt.y = glowa.y + 1;
+                    nowypunkt.X = glowa.X;
+                    nowypunkt.Y = glowa.Y + 1;
                     break;
                 case Kierunek.lewo:
-                    nowypunkt.x = glowa.x - 1;
-                    nowypunkt.y = glowa.y;
+                    nowypunkt.X = glowa.X - 1;
+                    nowypunkt.Y = glowa.Y;
                     break;
 
                 case Kierunek.prawo:
-                    nowypunkt.x = glowa.x + 1;
-                    nowypunkt.y = glowa.y;
+                    nowypunkt.X = glowa.X + 1;
+                    nowypunkt.Y = glowa.Y;
                     break;
             }
-            if (CzyJestNaWezu(nowypunkt))
+            if (
+            CzyJestNaWezu(nowypunkt)
+            || nowypunkt.X == 0
+            || nowypunkt.X == Console.WindowWidth - 1
+            || nowypunkt.Y == 0
+            || nowypunkt.Y == Console.WindowHeight - 1
+            )
             {
                 return false; // zderzenie 
             }
@@ -92,19 +99,21 @@ namespace GraWaz
         {
             return czlonkiWeza.Exists(p1 => p1.Equals(punkt));
         }
+        
+
 
         public void Narysuj()
         {
             if(!wydluzany)
             { 
-                Console.SetCursorPosition(gumka.x, gumka.y);
+                Console.SetCursorPosition(gumka.X, gumka.Y);
                 Console.Write(" ");
             }
 
             Console.BackgroundColor = ConsoleColor.Cyan;
             foreach(Punkt czlonek in czlonkiWeza)
             {
-                Console.SetCursorPosition(czlonek.x, czlonek.y);
+                Console.SetCursorPosition(czlonek.X, czlonek.Y);
                 Console.Write(" ");
             }
             Console.ResetColor();

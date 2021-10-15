@@ -3,23 +3,23 @@ namespace GraWaz
 {
     class Punkt : IEquatable<Punkt>
     {
-        public int x { get; set; }
-        public int y { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         public Punkt(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
         public Punkt()
         {
-            x = 0;
-            y = 0;
+            X = 0;
+            Y = 0;
         }
 
         public bool Equals(Punkt other)
         {
-            return x == other.x && y == other.y;
+            return X == other.X && Y == other.Y;
         }
     }
 }

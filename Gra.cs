@@ -8,16 +8,35 @@ namespace GraWaz
 {
     class Gra
     {
+
+        bool wGrze;
         Waz waz;
         Nagroda nagroda;
 
         Waz.Kierunek nowykierunek = Waz.Kierunek.prawo;
+        
+        
+        static private void NapiszNaSrodku(string text, ConsoleColor color)
+        {
+            Console.SetCursorPosition((Console.WindowWidth - text.Length) / 2, Console.WindowHeight / 2);
+            Console.ForegroundColor = color;
+            Console.Write(text);
+            Console.ResetColor();
+        }
+
+        public void GameOver()
+        {
+            Console.Clear();
+            NapiszNaSrodku("Game over", ConsoleColor.Red);
+            Console.ReadKey();
+            Environment.Exit(0);
+        }
 
         public void RozpocznijZbieraniePrzyciskow() // nwm jak to zrobic :(
         {
             Thread watekKlawiatury = new Thread(() =>
             {
-                while (true)
+                while (wGrze)
                 {
                     switch (Console.ReadKey(true).Key)
                     {
@@ -54,11 +73,12 @@ namespace GraWaz
 
         public void NowaGra()
         {
+
             Console.Clear();
 
             waz = new(2,2);
             Plansza.NarysujRamke();
-       
+            wGrze = true;       
             RozpocznijZbieraniePrzyciskow();
             Console.CursorVisible = false;
             bool kontynuujGre = true; 
@@ -71,10 +91,8 @@ namespace GraWaz
         public bool PetlaGry()
         {
             waz.UstawKierunek(nowykierunek);
-            waz.RuszSie();
+            if (!waz.RuszSie()) GameOver();
             waz.Narysuj();
-
-
             Thread.Sleep(70);
             return true;
         }
